@@ -9,11 +9,12 @@
         }
     ],
     "require": {
-        "symfony/http-kernel": "^4.2"
+        "symfony/http-kernel": "^4.2",
+        "symfony/validator": "^4.2"
     },
     "autoload": {
         "psr-4": {
-            "DorianNeto\\SymfonyProfaneBundle\\": ""
+            "DorianNeto\\SymfonyProfaneBundle\\": "src/"
         },
         "exclude-from-classmap": [
             "/Tests/"
