@@ -1,0 +1,22 @@
+{
+    "name": "dorianneto/symfony-profane-bundle",
+    "type": "symfony-bundle",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Dorian Neto",
+            "email": "doriansampaioneto@gmail.com"
+        }
+    ],
+    "require": {
+        "symfony/http-kernel": "^4.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "DorianNeto\\SymfonyProfaneBundle\\": ""
+        },
+        "exclude-from-classmap": [
+            "/Tests/"
+        ]
+    }
+}
