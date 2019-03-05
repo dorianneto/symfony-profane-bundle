@@ -1,3 +1,5 @@
+dist: trusty
+sudo: false
 language: php
 
 php:
@@ -14,10 +16,11 @@ install:
   - rm composer.lock
   - composer install --no-interaction
 
-script:
-  - ./vendor/bin/phpunit
+script: echo "Running jobs..."
 
 jobs:
   include:
+    - stage: Tests
+      script: ./vendor/bin/phpunit
     - stage: Code Quality
       script: ./vendor/bin/phpcs --standard=PSR1,PSR2 --extensions=php src/
