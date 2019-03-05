@@ -3,8 +3,21 @@ language: php
 php:
   - '7.1'
 
-install:
+cache:
+  directories:
+    - $HOME/.composer/cache/files
+
+before_install:
   - composer self-update
+
+install:
+  - rm composer.lock
   - composer install --no-interaction
 
-script: php vendor/bin/phpunit
+script:
+  - ./vendor/bin/phpunit
+
+jobs:
+  include:
+    - stage: Code Quality
+      script: ./vendor/bin/phpcs --standard=PSR1,PSR2 --extensions=php src/
