@@ -13,14 +13,14 @@ class ProfaneValidatorTest extends ConstraintValidatorTestCase
         return new NotProfaneValidator;
     }
 
-    public function test_empty_is_valid(): void
+    public function testEmptyIsValid(): void
     {
         $this->validator->validate('', new NotProfane());
 
         $this->assertNoViolation();
     }
 
-    public function test_null_is_valid(): void
+    public function testNullIsValid(): void
     {
         $this->validator->validate(null, new NotProfane());
 
@@ -30,7 +30,7 @@ class ProfaneValidatorTest extends ConstraintValidatorTestCase
     /**
      * @dataProvider getValidValues
      */
-    public function test_valid_values(string $value): void
+    public function testValidValues(string $value): void
     {
         $this->validator->validate($value, new NotProfane());
 
@@ -48,7 +48,7 @@ class ProfaneValidatorTest extends ConstraintValidatorTestCase
     /**
      * @dataProvider getInvalidValues
      */
-    public function test_invalid_values(string $value, string $expected): void
+    public function testInvalidValues(string $value, string $expected): void
     {
         $constraint = new NotProfane();
 
