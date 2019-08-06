@@ -12,7 +12,8 @@
         "php": "^7.1",
         "symfony/http-kernel": "^4.2",
         "symfony/validator": "^4.2",
-        "symfony/intl": "^4.2"
+        "symfony/intl": "^4.2",
+        "symfony/translation": "^4.3"
     },
     "autoload": {
         "psr-4": {

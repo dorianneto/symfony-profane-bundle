@@ -5,9 +5,12 @@ namespace DorianNeto\SymfonyProfaneBundle\Validator;
 use Symfony\Component\Validator\Constraint;
 use Symfony\Component\Validator\ConstraintValidator;
 use Symfony\Component\Validator\Exception\UnexpectedTypeException;
+use Symfony\Contracts\Translation\TranslatorTrait;
 
 class NotProfaneValidator extends ConstraintValidator
 {
+    use TranslatorTrait;
+
     public function validate($value, Constraint $constraint): void
     {
         /* @var $constraint App\Validator\NotProfane */
@@ -36,6 +39,6 @@ class NotProfaneValidator extends ConstraintValidator
 
     private function loadDictionary(): array
     {
-        return include __DIR__.'/../Resources/dict/pt-br.php';
+        return include __DIR__.'/../Resources/dictionaries/'.$this->getLocale().'.php';
     }
 }

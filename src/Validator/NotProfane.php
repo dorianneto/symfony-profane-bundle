@@ -9,5 +9,5 @@ use Symfony\Component\Validator\Constraint;
  */
 class NotProfane extends Constraint
 {
-    public $message = 'The value "{{ value }}" is not a profane word.';
+    public $message = 'symfony_profane.bundle.message';
 }
