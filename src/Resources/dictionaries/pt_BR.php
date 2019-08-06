@@ -2,8 +2,12 @@
 
 return [
     'porra',
-    'aborto',
+    'merda',
     'caralho',
     'puta',
     'cacete',
+    'viado',
+    'baitola',
+    'corno',
+    'idiota',
 ];
